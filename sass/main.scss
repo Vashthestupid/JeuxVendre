@@ -72,10 +72,7 @@ body{
 		@media #{$desktop}{display: none;}
 	}
 	h2{
-		text-align: center;
-		margin-top: 20px;
-		@media #{$phone}{font-size: 18px;}
-		@media #{$phone-se}{font-size: 18px;}
+		@include titre;
 	}
 }
 
@@ -123,3 +120,15 @@ body{
 		}
 	}
 }
+
+/*Code css pour partie Inscription.html*/
+
+.form_insc{
+	#toggle2{
+		@include toggle;
+	}
+	h2{
+		@include titre;
+	}
+}
+

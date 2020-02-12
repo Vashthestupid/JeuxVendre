@@ -46,3 +46,9 @@
        @media #{tablet}{margin-left: 7%;}
 }
 
+@mixin titre {
+       text-align: center;
+		margin-top: 20px;
+		@media #{$phone}{font-size: 18px;}
+		@media #{$phone-se}{font-size: 18px;}
+}
