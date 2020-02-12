@@ -1,0 +1,125 @@
+@import "libs/variables.scss";
+@import "libs/responsive.scss";
+@import "libs/mixins.scss";
+
+
+body{
+	font-family: 'Press Start 2P', cursive;
+	background-color: #fefee2;
+}
+
+.navbar{
+	.navbar-brand{
+		@media #{$phone-se}{font-size: 19px;}
+	}
+	.nav-item{
+		margin-left: 19px;
+		font-size: 1vw;
+		@media #{$phone}{font-size: 11px;}
+		@media #{$phone-se}{font-size: 11px;}
+		@media #{$tablet}{font-size: 15px;}
+		.dropdown-menu{
+			background-color: rgb(211, 204, 204) ;
+			@media #{$phone}{width: fit-content;}
+			@media #{$phone-se}{width: fit-content;}
+			@media #{$tablet}{width: fit-content;}
+			@media #{$tabletPro}{width: fit-content;}
+			.dropdown-item{
+				font-size: 8px;
+				@media #{$tablet}{font-size:11px;} 
+			}
+		}
+		
+	}
+}
+
+#menu{
+	background-color: #ee5253;
+	@media #{$phone}{ display: none;}
+	@media #{$phone-se}{display:none;}
+	@media #{$tablet}{display:none;}
+	#toggle{
+		@include toggle;
+	}
+	.marque{
+		color: black;
+		margin-top: 17px;
+		list-style-type: none;
+		@media #{$phone}{
+			text-align: left;
+		}
+		.consoles{
+			margin-left: 25%;
+			text-shadow: 1px 1px 10px black;
+			@media #{$phone}{margin-left: 0;}
+			@media #{$phone-se}{margin-left: -20px;}
+			@media #{$tabletPro}{ margin-left: -26px;}
+			.console{
+				list-style-type: none;
+				margin-top: 17px;
+				a{
+					@include lien;
+				}
+				@media #{$tabletPro}{font-size: 12px;}
+			}
+		}
+	}
+}
+
+.vitrine{
+	#toggle2{
+		@include toggle;
+		@media #{$desktop}{display: none;}
+	}
+	h2{
+		text-align: center;
+		margin-top: 20px;
+		@media #{$phone}{font-size: 18px;}
+		@media #{$phone-se}{font-size: 18px;}
+	}
+}
+
+.produits{
+	@include produits;
+	img{
+		width: 200px;
+		height: 250px;
+		@media #{$phone}{
+			width: 100px;
+			height: 140px;
+		}
+		@media #{$phone-se}{
+			width: 100px;
+			height: 140px;
+		}
+	}	
+	p{
+		margin-top: 10px;
+		margin-bottom: 0px;
+		width: 200px;
+		font-size: xx-small;
+		text-align: center;
+		@media #{$phone}{
+			font-size: 5px;
+			width: 100px;
+		}
+		@media #{$phone-se}{
+			font-size: 5px;
+			width: 100px;
+		}
+	}
+	button{
+		font-size: 10px;
+		width: 200px;
+		@media #{$phone}{
+			width: 100px;
+			height: 20px;
+			font-size: 5px;
+		}
+		@media #{$phone-se}{
+			width: 100px;
+			height: 20px;
+			font-size: 5px;
+		}
+	}
+}

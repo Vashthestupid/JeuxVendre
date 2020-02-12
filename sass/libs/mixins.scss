@@ -1,0 +1,48 @@
+@import 'responsive.scss';
+
+@mixin toggle{
+       width: 1.5em;
+       height: 1.5em;
+       div{
+              background: #000;
+              width: 100%;
+              height: 3px;
+              margin: 4px auto;
+       }  
+       @media #{$desktop}{display: none;}
+}
+
+@mixin lien {
+       text-decoration: none;
+       color: white;
+       transition-property: color;
+       transition-duration: 0.5s;
+       &:hover{
+              color: #fdcb6e;
+       }        
+}
+
+@mixin produits{
+       margin-left: 5%;
+	margin-top: 15px;
+	transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	&:hover{
+		transform: scale(1.25)	;
+		-webkit-transform: scale(1.25)	;
+		-moz-transform: scale(1.25)	;
+		-ms-transform: scale(1.25)	;
+		-o-transform: scale(1.25)	;
+}
+       @media #{$phone}{margin-left: 4%;}
+       @media #{$phone-plus}{margin-left: 7%;}
+       @media #{$phone-se}{margin-left: 12%;}
+       @media #{$phone6}{margin-left: 5%;}
+       @media #{$phone6plus}{margin-left: 7%;}
+       @media #{$phonex}{margin-left: 5%;}
+       @media #{tablet}{margin-left: 7%;}
+}
+

@@ -1,0 +1,21 @@
+/*Résolution globale*/
+
+$phone: 'screen and (min-width: 360px) and (max-width: 539px)';
+
+$phone-plus: 'screen and (width: 411px)';
+
+$phone-se:'screen and (width: 320px)';
+
+$tablet:'screen and (min-width: 768px) and (max-width: 1023px)'; 
+
+$desktop: 'screen and (min-width: 1024px)and (max-width: 1920px)';
+
+/* Résolution par appareils*/
+
+$phone6 : 'screen and (width: 375px) and (height: 667px)';
+
+$phone6plus: 'screen and (width: 414px) and (height: 736px)';
+
+$phonex: 'screen and (width: 375px) and (height: 812px)';
+
+$tabletPro: 'screen and (min-width: 1024px) and (max-width: 1366px)';
