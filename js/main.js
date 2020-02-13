@@ -36,6 +36,16 @@ $(document).ready(function(){
               $('.marque').css('color', '#000');
               $('.titre').css('color', 'white');
               $('.barre').css('color', 'white');
+              $('.formulaire').css('background-color', '#000');
+              $('label').css('color', '#fff');
+              $('input').css('color', '#fff');
+              $('.valid').replaceWith("<button class='btnPs' type='submit'>A</button>");
+              $('.reset').replaceWith("<button class=''btnXbox' type='reset'>B</button>");
+              $('.btnPs').css(
+                     'background-color', '#8bc24a'
+                     );
+             
+              
        });
 
        $('#xbox').click(function(){

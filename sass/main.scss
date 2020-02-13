@@ -3,9 +3,15 @@
 @import "libs/mixins.scss";
 
 
+html{
+	height: 100%
+}
+
+
 body{
 	font-family: 'Press Start 2P', cursive;
 	background-color: #fefee2;
+	height: 100%;
 }
 
 .navbar{
@@ -129,6 +135,14 @@ body{
 	}
 	h2{
 		@include titre;
+	}
+}
+
+.formulaire{
+	@include form;
+	.button{
+		display: flex;
+		@include formatBtn;
 	}
 }
 

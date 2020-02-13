@@ -52,3 +52,66 @@
 		@media #{$phone}{font-size: 18px;}
 		@media #{$phone-se}{font-size: 18px;}
 }
+
+@mixin form{
+       display: block;
+       margin: auto;
+       margin-top: 5%;
+	font-family: fantasy;
+	font-size: 20px;
+	background-color: #474747;
+	padding: 20px 15px 20px;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+       box-shadow: 12px 12px 2px 1px rgba($color: #8d8b8b, $alpha: 1.0);
+       .form-group{
+              @media #{$tabletPro}{margin-top: 35px;}
+       }
+	label{
+              text-align: center;
+              color: rgb(170, 169, 169);
+	}
+	input{
+		background-color: rgba($color: #eccc68, $alpha: 0.3);
+		box-shadow: inset 5px 5px rgba($color: #8d8d8b, $alpha: 1.0);
+	}
+}
+
+@mixin formatBtn {
+       button{
+              color: #fff;
+              display: block;
+              margin: auto;
+              font-size: 38px;
+              background-color: #4a4b4a;
+              border-radius: 100%;
+              border: none;
+              box-shadow: 0px 9px #252525;
+              -webkit-border-radius: 100%;
+              -moz-border-radius: 100%;
+              -ms-border-radius: 100%;
+              -o-border-radius: 100%;
+              height: 73px;
+              width: 7%;
+              outline: none;
+              &:hover{
+                     box-shadow: 0px 6px #252525;
+                     transform: translateY(3px);
+                     -webkit-transform: translateY(3px);
+                     -moz-transform: translateY(3px);
+                     -ms-transform: translateY(3px);
+                     -o-transform: translateY(3px);
+              }
+              &:active{
+                     box-shadow: 0px 3px #252525;
+                     transform: translateY(7px)              ;
+                     -webkit-transform: translateY(7px)              ;
+                     -moz-transform: translateY(7px)              ;
+                     -ms-transform: translateY(7px)              ;
+                     -o-transform: translateY(7px)              ;
+              }
+       }
+}
