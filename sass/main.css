@@ -337,6 +337,7 @@ body {
   }
 }
 .formulaire label {
+  font-family: "Oswald", sans-serif;
   text-align: center;
   color: #aaa9a9;
 }
@@ -351,6 +352,7 @@ body {
   color: #fff;
   display: block;
   margin: auto;
+  font-family: "Oswald", sans-serif;
   font-size: 38px;
   background-color: #555555;
   border-radius: 100%;
