@@ -74,18 +74,21 @@
               font-family: 'Oswald', sans-serif;
               text-align: center;
               color: rgb(170, 169, 169);
+              @media #{$tablet}{margin-top: 50px;}
 	}
 	input{
 		background-color: rgba($color: #eccc68, $alpha: 0.3);
-		box-shadow: inset 5px 5px rgba($color: #8d8d8b, $alpha: 1.0);
+              box-shadow: inset 5px 5px rgba($color: #8d8d8b, $alpha: 1.0);
+              @media #{$tablet}{margin-top: 50px;}
 	}
 }
 
 @mixin formatBtn {
-       button{
+       button, #btnPsO, #btnPsX{
               color: #fff;
               display: block;
               margin: auto;
+              margin-top: 6.5%;
               font-family: 'Oswald', sans-serif; 
               font-size: 38px;
               background-color: #555555;
@@ -115,5 +118,29 @@
                      -ms-transform: translateY(7px)              ;
                      -o-transform: translateY(7px)              ;
               }
+              @media #{$phone}{
+                     width: 14%;
+                     height: 46px;
+                     font-size: 26px;
+              };
+              @media #{$phone-se}{
+                     width: 14%;
+                     height: 46px;
+                     font-size:26px;
+              };
+              @media #{$phone6plus}{
+                     height: 55px;
+              }
+              @media #{$tablet}{
+                     width:7%;
+                     height: 54px;
+                     font-size: 22px;
+              }
+              @media #{$tabletPro}{
+                     width: 9%;
+                     height: 46px;
+                     font-size: 22px;
+              }
        }
+       
 }
