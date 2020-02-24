@@ -168,5 +168,13 @@ body{
 		-o-border-radius: 1px	;
 		box-shadow: none;
 	}
+	#messages{
+		display: none;
+		margin-top: 20px;
+		text-align: center;
+		@media #{$phone}{font-size : 10px;}
+		@media #{$tablet}{font-size: 15px;}
+		@media #{$tabletPro}{font-size: 11px;}
+	}
 }
 

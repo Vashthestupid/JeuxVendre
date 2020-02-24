@@ -38,17 +38,26 @@ $(document).ready(function(){
               $('.marque').css('color', '#000');
               $('.titre').css('color', 'white');
               $('.barre').css('color', 'white');
-              $('.formulaire').css('background-color', '#000');
+              $('.formulaire').css('background-color', '#2b2c31');
               $('label').css('color', '#fff');
               $('input').css('color', '#000');
-              $('.valid').replaceWith('<img id="btnPsX" src="../images/x_play.png">');
-              $('.reset').replaceWith('<img id="btnPsO" src="../images/o_play2.png">');
-              $('.btnXboxA').replaceWith('<img id="btnPsX" src="../images/x_play.png">');
-              $('.btnXboxB').replaceWith('<img id="btnPsO" src="../images/o_play2.png">');
-              $('#btnPsX').css('background-color', '#000');
-              $('#btnPsX').css('font-size','51px');
-              $('#btnPsO').css('background-color', '#000');
-              $('#btnPsO').css('font-size', '51px');
+              $('.valid').replaceWith('<input type="image" id="btnPsX" src="../images/x_play.png">');
+              $('.reset').replaceWith('<input type="image" id="btnPsO" src="../images/o_play2.png">');
+              $('#btnXboxA').replaceWith('<input type="image" id="btnPsX" src="../images/x_play.png">');
+              $('#btnXboxB').replaceWith('<input type="image" id="btnPsO" src="../images/o_play2.png">');
+              $('#btnPsX').css('background-color', 'black');
+              $('#btnPsO').css('background-color', 'black');
+              $('#btnPsO').click(function(){
+                     $('form').trigger('reset');
+              });
+              $('#btnPsX').mouseenter(function(){
+                     $('#btnPsX').css('box-shadow', '0px 6px #474747');
+                     $('#btnPsX').css('transform', 'translateY(3px)');
+              });
+              $('#btnPsX').mouseleave(function(){
+                     $('#btnPsX').css('box-shadow', '0px 9px #474747');
+                     $('#btnPsX').css('transform', 'none');
+              });
        });
 
 /*Création du thème Xbox*/
@@ -60,66 +69,62 @@ $(document).ready(function(){
               $('h2').css('color', '#fff');
               $('.marque').css('color', '#1a7b10');
               $('.titre').css('color', 'black');
-              $('.valid').replaceWith("<button class='btnXboxA' type='submit'>A</button>")
-              $('.reset').replaceWith("<button class='btnXboxB' type='reset'>B</button>")
-              $('#btnPsX').replaceWith("<button class='btnXboxA' type='submit'>A</button>")
-              $('#btnPsO').replaceWith("<button class='btnXboxB' type='reset'>B</button>")
-              $('.btnXboxA').css('background-color', '#8bc24a');
-              $('.btnXboxA').css('color','#dceec4');
-              $('.btnXboxA').css('box-shadow','0px 9px #689f37');
-              $('.btnXboxA').mouseenter(function(){
-                     $(this).css(
-                            'box-shadow','0px 6px #689f37',
-                            'transform','translateY(3px)'
-                     );
+              $('.valid').replaceWith('<input type="submit" id="btnXboxA" value="A">');
+              $('.reset').replaceWith('<input type="reset" id="btnXboxB" value="B">');
+              $('#btnPsX').replaceWith('<input type="submit" id="btnXboxA" value="A">');
+              $('#btnPsO').replaceWith('<input type="reset" id="btnXboxB" value="B">');
+              $('#btnXboxA').css('background-color', '#8bc24a')
+              $('#btnXboxA').css('box-shadow', '0px 9px #67a039');
+              $('#btnXboxA').mouseenter(function(){
+                     $('#btnXboxA').css('box-shadow','0px 6px #67a039');
+                     $('#btnXboxA').css('transform', 'translateY(3px)');
               });
-              $('.btnXboxA').mouseleave(function(){
-                     $(this).css(
-                            'box-shadow','0px 9px #689f37',
-                            'transform','none'
-                     );
+              $('#btnXboxA').mouseleave(function(){
+                     $('#btnXboxA').css('box-shadow','0px 9px #67a039');
+                     $('#btnXboxA').css('transform','none');
               });
-              $('.btnXboxA').mousedown(function(){
-                     $(this).css(
-                            'box-shadow','0px 3px #689f37',
-                            'transform','translateY(7px)'
-                     );
+              $('#btnXboxA').mousedown(function(){
+                     $('#btnXboxA').css('box-shadow', '0px 3px #67a039');
+                     $('#btnXboxA').css('transform','translateY(7px');
               });
-              $('.btnXboxA').mouseup(function(){
-                     $(this).css(
-                            'box-shadow','0px 6px #689f37',
-                            'transform','translateY(3px)'
-                     );
+              $('#btnXboxA').mouseup(function(){
+                     $('#btnXboxA').css('box-shadow','0px 6px #67a039');
+                     $('#btnXboxA').css('transform','translateY(3px');
+              }); 
+              $('#btnXboxB').css('background-color', '#ea5541')
+              $('#btnXboxB').css('box-shadow', '0px 9px #be240a');
+              $('#btnXboxB').mouseenter(function(){
+                     $('#btnXboxB').css('box-shadow','0px 6px #be240a');
+                     $('#btnXboxB').css('transform', 'translateY(3px)');
               });
-              $('.btnXboxB').css('color', '#ffc9b4');
-              $('.btnXboxB').css('background-color', '#fb5722');
-              $('.btnXboxB').css('box-shadow','0px 9px #dd2c00');
-              $('.btnXboxB').mouseenter(function(){
-                     $(this).css(
-                            'box-shadow','0px 6px #dd2c00',
-                            'transform','translateY(3px)'
-                     );
+              $('#btnXboxB').mouseleave(function(){
+                     $('#btnXboxB').css('box-shadow','0px 9px #be240a');
+                     $('#btnXboxB').css('transform','none');
               });
-              $('.btnXboxB').mouseleave(function(){
-                     $(this).css(
-                            'box-shadow','0px 9px #dd2c00',
-                            'transform','none'
-                     );
+              $('#btnXboxB').mousedown(function(){
+                     $('#btnXboxB').css('box-shadow', '0px 3px #be240a');
+                     $('#btnXboxB').css('transform','translateY(7px');
               });
-              $('.btnXboxB').mousedown(function(){
-                     $(this).css(
-                            'box-shadow','0px 3px #dd2c00',
-                            'transform','translateY(7px)'
-                     );
+              $('#btnXboxB').mouseup(function(){
+                     $('#btnXboxB').css('box-shadow','0px 6px #be240a');
+                     $('#btnXboxB').css('transform','translateY(3px)');
               });
-              $('.btnXboxB').mouseup(function(){
-                     $(this).css(
-                            'box-shadow','0px 6px #dd2c00',
-                            'transform','translateY(3px)'
-                     );
-              });
+              if($(window).width() < 1025){
+                     $('#btnXboxA').css('box-shadow', 'none');
+                     $('#btnXboxA').css('transform', 'none');
+                     $('#btnXboxA').off("mouseenter");
+                     $('#btnXboxA').off("mouseleave");
+                     $('#btnXboxA').off("mousedown");
+                     $('#btnXboxA').off("mouseup");
+                     $('#btnXboxB').css('box-shadow', 'none');
+                     $('#btnXboxB').css('transform', 'none');
+                     $('#btnXboxB').off("mouseenter");
+                     $('#btnXboxB').off("mouseleave");
+                     $('#btnXboxB').off("mousedown");
+                     $('#btnXboxB').off("mouseup");
+              }
+              
        });
-
 /*Création du thème Nintendo*/
 
        $('#nintendo').click(function(){
@@ -129,10 +134,33 @@ $(document).ready(function(){
               $('h2').css('color', '#000');
               $('.marque').css('color', '#000');
               $('.titre').css('color', 'black');
-              $('.btnXboxA').replaceWith('<button type="submit" class="valid">A</button>');
-              $('.btnXboxB').replaceWith('<button class="reset" type="reset">B</button>');
-              $('#btnPsX').replaceWith("<button class='valid' type='submit'>A</button>")
-              $('#btnPsO').replaceWith("<button class='reset' type='reset'>B</button>")
+       });
+
+
+
+// Gestion des erreurs formulaire d'inscription
+       $('form').submit(function(e){
+
+              var erreur;
+              var mdp = $('#mdp');
+              var mdp2 = $('#mdp2');
+              e.preventDefault();
+
+              if(mdp2.val() != mdp.val()){
+                     erreur = 'Les deux mots de passes ne correspondent pas.';
+              }
+              if(erreur){
+                     $('#messages').show()
+                     $('#message').text(erreur);
+                     $('#message').css('color','#CD3430');
+                     return false;
+              } else {
+                     $('#messages').show();
+                     $('#message').text('Le formulaire à bien été envoyé.');
+                     $('#message').css('color', '#6A8B18');  
+                     $('form').trigger('reset');
+              };
+
        });
        
 });
