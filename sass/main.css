@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   height: 100%;
 }
@@ -376,30 +375,17 @@ body {
   margin-top: 6.5%;
   font-family: "Oswald", sans-serif;
   font-size: 38px;
-  background-color: #555555;
   border-radius: 100%;
   border: none;
-  box-shadow: 0px 9px #252525;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
   height: 73px;
   width: 7%;
   outline: none;
-  /*Format des boutons dans ces résolutions*/
 }
 @media screen and (min-width: 360px) and (max-width: 539px) {
   .formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
     width: 14%;
     height: 46px;
     font-size: 26px;
-    box-shadow: none;
-    transform: none;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
   }
 }
 @media screen and (width: 320px) {
@@ -407,35 +393,17 @@ body {
     width: 14%;
     height: 46px;
     font-size: 26px;
-    box-shadow: none;
-    transform: none;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
   }
 }
 @media screen and (width: 414px) and (height: 736px) {
   .formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
     height: 55px;
-    box-shadow: none;
-    transform: none;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
   }
 }
 @media screen and (width: 375px) and (height: 812px) {
   .formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
     font-size: 16px;
     width: 13%;
-    box-shadow: none;
-    transform: none;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -443,12 +411,6 @@ body {
     width: 7%;
     height: 54px;
     font-size: 22px;
-    box-shadow: none;
-    transform: none;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
@@ -506,6 +468,14 @@ body {
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
   .formulaire #messages {
     font-size: 11px;
+  }
+}
+.formulaire #plateformes {
+  font-size: 16px;
+}
+@media screen and (min-width: 360px) and (max-width: 539px) {
+  .formulaire #plateformes {
+    width: 100%;
   }
 }
 

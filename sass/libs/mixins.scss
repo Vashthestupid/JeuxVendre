@@ -93,14 +93,8 @@
               margin-top: 6.5%;
               font-family: 'Oswald', sans-serif; 
               font-size: 38px;
-              background-color: #555555;
               border-radius: 100%;
               border: none;
-              box-shadow: 0px 9px #252525;
-              -webkit-border-radius: 100%;
-              -moz-border-radius: 100%;
-              -ms-border-radius: 100%;
-              -o-border-radius: 100%;
               height: 73px;
               width: 7%;
               outline: none;
@@ -108,54 +102,23 @@
                      width: 14%;
                      height: 46px;
                      font-size: 26px;
-                     box-shadow: none;
-                     transform: none;              ;
-                     -webkit-transform: none              ;
-                     -moz-transform: none              ;
-                     -ms-transform: none              ;
-                     -o-transform: none              ;
               }
-              /*Format des boutons dans ces résolutions*/
               @media #{$phone-se}{
                      width: 14%;
                      height: 46px;
                      font-size:26px;
-                     box-shadow: none;
-                     transform: none;
-                     -webkit-transform: none;
-                     -moz-transform: none;
-                     -ms-transform: none;
-                     -o-transform: none;
               }
               @media #{$phone6plus}{
                    height: 55px;
-                   box-shadow: none;
-                   transform: none;
-                   -webkit-transform: none;
-                   -moz-transform: none;
-                   -ms-transform: none;
-                   -o-transform: none;
               }
               @media #{$phonex}{
                      font-size: 16px;
                      width: 13%;
-                     box-shadow: none;
-                     transform: none              ;
-                     -webkit-transform: none              ;
-                     -moz-transform: none              ;
-                     -ms-transform: none              ;
-                     -o-transform: none              ;
               }
               @media #{$tablet}{
                      width:7%;
                      height: 54px;
                      font-size: 22px;
-                     box-shadow: none;
-                     transform: none;
-                     -webkit-transform: none;
-                     -moz-transform: none;
-                     -ms-transform: none;
-                     -o-transform: none;
               }
               @media #{$tabletPro}{
                      width: 9%;
