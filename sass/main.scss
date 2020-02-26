@@ -158,8 +158,8 @@ body{
 		-moz-border-radius: 1px	;
 		-ms-border-radius: 1px	;
 		-o-border-radius: 1px	;
-		box-shadow: none;
-}
+		box-shadow: none;	
+	}
 	@media #{$tablet}{
 		border-radius: 1px	;
 		-webkit-border-radius: 1px	;
@@ -168,19 +168,9 @@ body{
 		-o-border-radius: 1px	;
 		box-shadow: none;
 	}
-	#messages{
-		display: none;
-		margin-top: 20px;
-		text-align: center;
-		@media #{$phone}{font-size : 10px;}
-		@media #{$tablet}{font-size: 15px;}
-		@media #{$tabletPro}{font-size: 11px;}
-	}
-	#plateformes{
-		font-size: 16px;
-		@media #{$phone}{
-			width: 100%;
-		}
-	}
+}
+
+#btnXboxA{
+	display: none;
 }
 

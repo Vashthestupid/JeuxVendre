@@ -1,0 +1,75 @@
+body{
+    background: #44bd32;
+}
+
+#menu{
+    background: #2f3640;
+}
+
+.formulaire{
+    background-color: #000;
+}
+
+h2{
+    color:#fff;
+}
+
+#menu .marque{
+    color: #1a7b10;
+}
+
+.titre{
+    color: black;
+}
+
+.valid{
+    display: none;
+}
+
+#btnXboxA{
+    background-color: #8bc24a;
+    color: #fff;
+    display: block;
+    margin: auto;
+    margin-top: 6.5%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    border: none;
+    height: 73px;
+    width: 7%;
+    outline: none;
+    box-shadow: 0px 9px #67a039;
+    border-radius:100% ;
+    -webkit-border-radius:100% ;
+    -moz-border-radius:100% ;
+    -ms-border-radius:100% ;
+    -o-border-radius:100% ;
+}
+
+#btnXboxB{
+    background-color: #ea5541;
+    color: #fff;
+    display: block;
+    margin: auto;
+    margin-top: 6.5%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    border: none;
+    height: 73px;
+    width: 7%;
+    outline: none;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-shadow: 0px 9px #be240a;
+}
+
+@media screen and (min-width: 360px) and (max-width: 539px){
+    #btnXboxA, #btnXboxB {
+        width: 14%;
+        height: 46px;
+        font-size: 26px;
+    }
+}

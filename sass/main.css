@@ -352,23 +352,65 @@ body {
 }
 @media screen and (min-width: 360px) and (max-width: 539px) {
   .formulaire input {
-    font-size: 10px;
+    font-size: 13px;
+    text-align: center;
   }
 }
 @media screen and (width: 320px) {
   .formulaire input {
     font-size: 8px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .formulaire input {
     margin-top: 50px;
+    text-align: center;
+  }
+}
+.formulaire #messages {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 360px) and (max-width: 539px) {
+  .formulaire #messages {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .formulaire #messages {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .formulaire #messages {
+    font-size: 11px;
+  }
+}
+.formulaire #plateformes {
+  font-size: 16px;
+  width: 100%;
+}
+@media screen and (min-width: 360px) and (max-width: 539px) {
+  .formulaire #plateformes {
+    font-size: 13px;
+  }
+}
+.formulaire #commentaire {
+  width: 100%;
+  font-size: 16px;
+}
+@media screen and (min-width: 360px) and (max-width: 539px) {
+  .formulaire #commentaire {
+    font-size: 15px;
   }
 }
 .formulaire .button {
   display: flex;
 }
-.formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
+.formulaire .button .valid, .formulaire .button .reset {
+  background-color: #555555;
   color: #fff;
   display: block;
   margin: auto;
@@ -380,41 +422,42 @@ body {
   height: 73px;
   width: 7%;
   outline: none;
+  box-shadow: 0px 9px #252525;
 }
 @media screen and (min-width: 360px) and (max-width: 539px) {
-  .formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
+  .formulaire .button .valid, .formulaire .button .reset {
     width: 14%;
     height: 46px;
     font-size: 26px;
   }
 }
 @media screen and (width: 320px) {
-  .formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
+  .formulaire .button .valid, .formulaire .button .reset {
     width: 14%;
     height: 46px;
     font-size: 26px;
   }
 }
 @media screen and (width: 414px) and (height: 736px) {
-  .formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
+  .formulaire .button .valid, .formulaire .button .reset {
     height: 55px;
   }
 }
 @media screen and (width: 375px) and (height: 812px) {
-  .formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
+  .formulaire .button .valid, .formulaire .button .reset {
     font-size: 16px;
     width: 13%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
+  .formulaire .button .valid, .formulaire .button .reset {
     width: 7%;
     height: 54px;
     font-size: 22px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
-  .formulaire .button .valid, .formulaire .button .reset, .formulaire .button #btnPsO, .formulaire .button #btnPsX, .formulaire .button #btnXboxA, .formulaire .button #btnXboxB {
+  .formulaire .button .valid, .formulaire .button .reset {
     width: 9%;
     height: 46px;
     font-size: 22px;
@@ -450,33 +493,9 @@ body {
     box-shadow: none;
   }
 }
-.formulaire #messages {
+
+#btnXboxA {
   display: none;
-  margin-top: 20px;
-  text-align: center;
-}
-@media screen and (min-width: 360px) and (max-width: 539px) {
-  .formulaire #messages {
-    font-size: 10px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .formulaire #messages {
-    font-size: 15px;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
-  .formulaire #messages {
-    font-size: 11px;
-  }
-}
-.formulaire #plateformes {
-  font-size: 16px;
-}
-@media screen and (min-width: 360px) and (max-width: 539px) {
-  .formulaire #plateformes {
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

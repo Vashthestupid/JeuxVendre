@@ -79,14 +79,42 @@
               color: $color;
 		background-color: rgba($color: #eccc68, $alpha: 0.3);
               box-shadow: inset 5px 5px rgba($color: #8d8d8b, $alpha: 1.0);
-              @media #{$phone}{font-size: 10px;}
-              @media #{$phone-se}{font-size: 8px;}
-              @media #{$tablet}{margin-top: 50px;}
+              @media #{$phone}{
+                     font-size: 13px;
+                     text-align: center;
+              }
+              @media #{$phone-se}{
+                     font-size: 8px;
+                     text-align: center;
+              }
+              @media #{$tablet}{
+                     margin-top: 50px;
+                     text-align: center;
+              }
+       }
+       #messages{
+		display: none;
+		margin-top: 20px;
+		text-align: center;
+		@media #{$phone}{font-size : 10px;}
+		@media #{$tablet}{font-size: 15px;}
+		@media #{$tabletPro}{font-size: 11px;}
+	}
+	#plateformes{
+		font-size: 16px;
+		width:100%;
+		@media #{$phone}{font-size: 13px;}
+	}
+	#commentaire{
+		width: 100%;
+		font-size: 16px;
+		@media #{$phone}{font-size: 15px;}
 	}
 }
 
 @mixin formatBtn {
-       .valid, .reset, #btnPsO, #btnPsX, #btnXboxA, #btnXboxB{
+       .valid, .reset{
+              background-color: #555555;
               color: #fff;
               display: block;
               margin: auto;
@@ -98,6 +126,7 @@
               height: 73px;
               width: 7%;
               outline: none;
+              box-shadow: 0px 9px #252525;
               @media #{$phone}{
                      width: 14%;
                      height: 46px;
@@ -127,4 +156,6 @@
               }
        }     
 }
+
+
 

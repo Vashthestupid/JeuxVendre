@@ -29,73 +29,12 @@ $(document).ready(function(){
     
        // Changement au niveau des thèmes
 
-/*Bouton de base*/
-       $('.valid').css('background-color', '#555555');
-       $('.valid').css('box-shadow', '0px 9px #252525');
-       $('.valid').mouseenter(function(){
-              $(this).css('box-shadow','0px 6px #252525');
-              $(this).css('transform', 'translateY(3px)');
-       });
-       $('.valid').mouseleave(function(){
-              $(this).css('box-shadow','0px 9px #252525');
-              $(this).css('transform','none');
-       });
-       $('.valid').mousedown(function(){
-              $(this).css('box-shadow', '0px 3px #252525')
-              $(this).css('transform','translateY(7px)');
-       });
-       $('.valid').mouseup(function(){
-              $(this).css('box-shadow','0px 6px #252525');
-              $(this).css('transform','translateY(3px)');
-       });
-       $('.reset').css('background-color', '#555555');
-       $('.reset').css('box-shadow', '0px 9px #252525');
-       $('.reset').mouseenter(function(){
-              $(this).css('box-shadow','0px 6px #252525');
-              $(this).css('transform','translateY(3px)');
-       });
-       $('.reset').mouseleave(function(){
-              $(this).css('box-shadow','0px 9px #252525');
-              $(this).css('transform', 'none');
-       });
-       $('.reset').mousedown(function(){
-              $(this).css('box-shadow','0px 3px #252525');
-              $(this).css('transform', 'translateY(7px)');
-       });
-       $('.reset').mouseup(function(){
-              $(this).css('box-shadow','0px 6px #252525');
-              $(this).css('transform','translateY(3px)');
-       });
-
-       if($(window).width()<1025){
-              $('.valid').css('background-color','#252525');
-              $('.reset').css('background-color','#252525');
-              $('.valid').css('box-shadow','none');
-              $('.reset').css('box-shadow','none');
-              $('.valid').css('transform', 'none');
-              $('.reset').css('transform', 'none');
-              $('.valid').off('mouseenter');
-              $('.valid').off('mouseleave');
-              $('.valid').off('mousedown');
-              $('.valid').off('mouseup');
-              $('.reset').off('mouseenter');
-              $('.reset').off('mouseleave');
-              $('.reset').off('mousedown');
-              $('.reset').off('mouseup');
-       }
-
 /*Création du thème Playstation*/
 
        $('#playstation').click(function(){
-              $('body').css('background', '#093d91');
-              $('#menu').css('background', '#2c75ff');
-              $('h2').css('color', '#fff');
-              $('.marque').css('color', '#000');
-              $('.titre').css('color', 'white');
-              $('.barre').css('color', 'white');
-              $('.formulaire').css('background-color', '#2b2c31');
-              $('label').css('color', '#fff');
-              $('input').css('color', '#000');
+              $("head").append(
+                     $(document.createElement('link')).attr({rel:"stylesheet", type:"text/css", href:"/css/themePs.css"})
+              );
               $('.valid').replaceWith('<input type="image" id="btnPsX" src="../images/x_play.png">');
               $('.reset').replaceWith('<input type="image" id="btnPsO" src="../images/o_play2.png">');
               $('#btnXboxA').replaceWith('<input type="image" id="btnPsX" src="../images/x_play.png">');
@@ -152,24 +91,19 @@ $(document).ready(function(){
                      $('#btnPsO').off('mouseleave');
                      $('#btnPsO').off('mousedown');
                      $('#btnPsO').off('mouseup');
-              }
+              };
        });
 
 /*Création du thème Xbox*/
 
        $('#xbox').click(function(){
-              $('body').css('background', '#44bd32');
-              $('#menu').css('background', '#2f3640');
-              $('.formulaire').css('background-color', '#000');
-              $('h2').css('color', '#fff');
-              $('.marque').css('color', '#1a7b10');
-              $('.titre').css('color', 'black');
+              $("head").append(
+                     $(document.createElement('link')).attr({rel:"stylesheet", type:"text/css", href:'/css/themeXbox.css'})
+              );
               $('.valid').replaceWith('<input type="submit" id="btnXboxA" value="A">');
               $('.reset').replaceWith('<input type="reset" id="btnXboxB" value="B">');
               $('#btnPsX').replaceWith('<input type="submit" id="btnXboxA" value="A">');
               $('#btnPsO').replaceWith('<input type="reset" id="btnXboxB" value="B">');
-              $('#btnXboxA').css('background-color', '#8bc24a')
-              $('#btnXboxA').css('box-shadow', '0px 9px #67a039');
               $('#btnXboxA').mouseenter(function(){
                      $('#btnXboxA').css('box-shadow','0px 6px #67a039');
                      $('#btnXboxA').css('transform', 'translateY(3px)');
@@ -186,8 +120,6 @@ $(document).ready(function(){
                      $('#btnXboxA').css('box-shadow','0px 6px #67a039');
                      $('#btnXboxA').css('transform','translateY(3px)');
               }); 
-              $('#btnXboxB').css('background-color', '#ea5541')
-              $('#btnXboxB').css('box-shadow', '0px 9px #be240a');
               $('#btnXboxB').mouseenter(function(){
                      $('#btnXboxB').css('box-shadow','0px 6px #be240a');
                      $('#btnXboxB').css('transform', 'translateY(3px)');
@@ -217,22 +149,69 @@ $(document).ready(function(){
                      $('#btnXboxB').off("mouseleave");
                      $('#btnXboxB').off("mousedown");
                      $('#btnXboxB').off("mouseup");
-              };
-              
+              };                            
        });
 /*Création du thème Nintendo*/
 
        $('#nintendo').click(function(){
-              $('body').css('background', '#fefee2');
-              $('#menu').css('background', '#ee5253');
-              $('.formulaire').css('background-color', '#474747');
-              $('h2').css('color', '#000');
-              $('.marque').css('color', '#000');
-              $('.titre').css('color', 'black');
+              $('head').append(
+                     $(document.createElement('link')).attr({rel:'stylesheet', type:'text/css', href:'/sass/main.css'})
+              );
               $('#btnPsX').replaceWith('<input type="submit" class="valid" value="A">');
               $('#btnPsO').replaceWith('<input type="reset" class="reset" value="B">');
               $('#btnXboxA').replaceWith('<input type="submit" class="valid" value="A">');
               $('#btnXboxB').replaceWith('<input type="reset" class="reset" value="B">');  
+              $('.valid').mouseenter(function(){
+                     $(this).css('box-shadow','0px 6px #252525');
+                     $(this).css('transform', 'translateY(3px)');
+              });
+              $('.valid').mouseleave(function(){
+                     $(this).css('box-shadow','0px 9px #252525');
+                     $(this).css('transform','none');
+              });
+              $('.valid').mousedown(function(){
+                     $(this).css('box-shadow', '0px 3px #252525')
+                     $(this).css('transform','translateY(7px)');
+              });
+              $('.valid').mouseup(function(){
+                     $(this).css('box-shadow','0px 6px #252525');
+                     $(this).css('transform','translateY(3px)');
+              });
+              $('.reset').css('background-color', '#555555');
+              $('.reset').css('box-shadow', '0px 9px #252525');
+              $('.reset').mouseenter(function(){
+                     $(this).css('box-shadow','0px 6px #252525');
+                     $(this).css('transform','translateY(3px)');
+              });
+              $('.reset').mouseleave(function(){
+                     $(this).css('box-shadow','0px 9px #252525');
+                     $(this).css('transform', 'none');
+              });
+              $('.reset').mousedown(function(){
+                     $(this).css('box-shadow','0px 3px #252525');
+                     $(this).css('transform', 'translateY(7px)');
+              });
+              $('.reset').mouseup(function(){
+                     $(this).css('box-shadow','0px 6px #252525');
+                     $(this).css('transform','translateY(3px)');
+              });
+       
+              if($(window).width()<1025){
+                     $('.valid').css('background-color','#252525');
+                     $('.reset').css('background-color','#252525');
+                     $('.valid').css('box-shadow','none');
+                     $('.reset').css('box-shadow','none');
+                     $('.valid').css('transform', 'none');
+                     $('.reset').css('transform', 'none');
+                     $('.valid').off('mouseenter');
+                     $('.valid').off('mouseleave');
+                     $('.valid').off('mousedown');
+                     $('.valid').off('mouseup');
+                     $('.reset').off('mouseenter');
+                     $('.reset').off('mouseleave');
+                     $('.reset').off('mousedown');
+                     $('.reset').off('mouseup');
+              }
        });
 
 
