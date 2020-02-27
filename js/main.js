@@ -203,9 +203,8 @@ $(document).ready(function(){
               };
               if(!commentaire.val()){
                      erreur = 'Veuillez saisir un commentaire';
-              } else if (commentaire.val() > 3 ){
-                     erreur = 'Votre commentaire est bien trop long ! Qui va le lire à votre avis ?!';
-              };
+              }
+
               if(erreur){
                      $('#messages').show()
                      $('#message').text(erreur);
