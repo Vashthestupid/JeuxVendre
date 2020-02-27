@@ -29,6 +29,23 @@ $(document).ready(function(){
     
        // Changement au niveau des thèmes
 
+       $('form .button input').mouseenter(function(){
+              $(this).css('box-shadow','0px 6px #252525');
+              $(this).css('transform','translateY(3px)');
+       });
+       $('form .button input').mouseleave(function(){
+              $(this).css('box-shadow','0px 9px #252525');
+              $(this).css('transform','none');
+       });
+       $('form .button input').mousedown(function(){
+              $(this).css('box-shadow','0px 3px #252525');
+              $(this).css('transform', 'translateY(7px)');
+       });
+       $('form .button input').mouseup(function(){
+              $(this).css('box-shadow','0px 6px #252525 ');
+              $(this).css('transform', 'translateY(3px)');
+       });
+
 /*Création du thème Playstation*/
 
        $('#playstation').click(function(){
@@ -196,6 +213,7 @@ $(document).ready(function(){
               var mdp = $('#mdp');
               var mdp2 = $('#mdp2');
               var commentaire = $('#commentaire');
+              var max = parseInt($('#commentaire').val(), 5);
               e.preventDefault();
 
               if(mdp2.val() != mdp.val()){
@@ -203,7 +221,9 @@ $(document).ready(function(){
               };
               if(!commentaire.val()){
                      erreur = 'Veuillez saisir un commentaire';
-              }
+              } else if (commentaire.val() > max){
+                     erreur = 'Vous avez dépassé le nombre maximum de caractère';
+              };
 
               if(erreur){
                      $('#messages').show()
@@ -215,6 +235,26 @@ $(document).ready(function(){
                      $('#message').text('Le formulaire à bien été envoyé.');
                      $('#message').css('color', '#6A8B18');  
                      $('form').trigger('reset');
+              };
+
+              switch (erreur){
+                     case mdp:
+                            if(mdp2.val() != mdp.val()){
+                                   erreur = 'Les deux mots de passe ne correspondent pas.';
+                            };
+                            break;
+                     case commentaire:
+                            if(!commentaire.val()){
+                                   erreur = 'Vous devez saisir un commentaire';
+                            };
+                            break;
+                     case commentaire:
+                            for (cpt = 0; cpt < 150 ; cpt++){
+                                   if(cpt > 150){
+                                          erreur = 'Votre commentaire est un peu long';
+                                   };
+                            };
+                            break;
               };
 
        });
