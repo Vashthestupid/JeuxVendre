@@ -131,6 +131,12 @@
                      width: 14%;
                      height: 46px;
                      font-size: 26px;
+                     box-shadow: none;
+                     transform: none              ;
+                     -webkit-transform: none              ;
+                     -moz-transform: none              ;
+                     -ms-transform: none              ;
+                     -o-transform: none              ;
               }
               @media #{$phone-se}{
                      width: 14%;

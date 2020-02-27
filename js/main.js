@@ -161,57 +161,30 @@ $(document).ready(function(){
               $('#btnPsO').replaceWith('<input type="reset" class="reset" value="B">');
               $('#btnXboxA').replaceWith('<input type="submit" class="valid" value="A">');
               $('#btnXboxB').replaceWith('<input type="reset" class="reset" value="B">');  
-              $('.valid').mouseenter(function(){
+              $('form .button input').mouseenter(function(){
                      $(this).css('box-shadow','0px 6px #252525');
-                     $(this).css('transform', 'translateY(3px)');
+                     $(this).css('transform','translateY(3px)');
               });
-              $('.valid').mouseleave(function(){
+              $('form .button input').mouseleave(function(){
                      $(this).css('box-shadow','0px 9px #252525');
                      $(this).css('transform','none');
               });
-              $('.valid').mousedown(function(){
-                     $(this).css('box-shadow', '0px 3px #252525')
-                     $(this).css('transform','translateY(7px)');
-              });
-              $('.valid').mouseup(function(){
-                     $(this).css('box-shadow','0px 6px #252525');
-                     $(this).css('transform','translateY(3px)');
-              });
-              $('.reset').css('background-color', '#555555');
-              $('.reset').css('box-shadow', '0px 9px #252525');
-              $('.reset').mouseenter(function(){
-                     $(this).css('box-shadow','0px 6px #252525');
-                     $(this).css('transform','translateY(3px)');
-              });
-              $('.reset').mouseleave(function(){
-                     $(this).css('box-shadow','0px 9px #252525');
-                     $(this).css('transform', 'none');
-              });
-              $('.reset').mousedown(function(){
+              $('form .button input').mousedown(function(){
                      $(this).css('box-shadow','0px 3px #252525');
                      $(this).css('transform', 'translateY(7px)');
               });
-              $('.reset').mouseup(function(){
-                     $(this).css('box-shadow','0px 6px #252525');
-                     $(this).css('transform','translateY(3px)');
+              $('form .button input').mouseup(function(){
+                     $(this).css('box-shadow','0px 6px #252525 ');
+                     $(this).css('transform', 'translateY(3px)');
               });
-       
               if($(window).width()<1025){
-                     $('.valid').css('background-color','#252525');
-                     $('.reset').css('background-color','#252525');
-                     $('.valid').css('box-shadow','none');
-                     $('.reset').css('box-shadow','none');
-                     $('.valid').css('transform', 'none');
-                     $('.reset').css('transform', 'none');
-                     $('.valid').off('mouseenter');
-                     $('.valid').off('mouseleave');
-                     $('.valid').off('mousedown');
-                     $('.valid').off('mouseup');
-                     $('.reset').off('mouseenter');
-                     $('.reset').off('mouseleave');
-                     $('.reset').off('mousedown');
-                     $('.reset').off('mouseup');
-              }
+                    $('form .button input').css('box-shadow','none');
+                    $('form .button input').css('transform', 'none');
+                    $('form .button input').off('mouseenter');
+                    $('form .button input').off('mouseleave');
+                    $('form .button input').off('mousedown');
+                    $('form .button input').off('mouseup');
+              };
        });
 
 
@@ -222,11 +195,17 @@ $(document).ready(function(){
               var erreur;
               var mdp = $('#mdp');
               var mdp2 = $('#mdp2');
+              var commentaire = $('#commentaire');
               e.preventDefault();
 
               if(mdp2.val() != mdp.val()){
                      erreur = 'Les deux mots de passes ne correspondent pas.';
-              }
+              };
+              if(!commentaire.val()){
+                     erreur = 'Veuillez saisir un commentaire';
+              } else if (commentaire.val() > 3 ){
+                     erreur = 'Votre commentaire est bien trop long ! Qui va le lire à votre avis ?!';
+              };
               if(erreur){
                      $('#messages').show()
                      $('#message').text(erreur);
