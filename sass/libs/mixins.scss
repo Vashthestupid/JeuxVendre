@@ -48,7 +48,8 @@
 
 @mixin titre {
        text-align: center;
-		margin-top: 20px;
+              margin-top: 20px;
+              font-size:25px;
 		@media #{$phone}{font-size: 18px;}
 		@media #{$phone-se}{font-size: 18px;}
 }
@@ -164,4 +165,23 @@
 }
 
 
-
+@mixin formatResumé {
+       background-color: #474747;
+       margin-top: 20px;
+       border-radius: 20px;
+       -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+       -ms-border-radius: 20px;
+       -o-border-radius: 20px;
+       h3{
+              font-size: 1vw;
+              padding-top: 10px;
+              text-align: center;
+              color: #aaa9a9;
+       }
+       p{
+              margin-left: 2%;
+              margin-top: 20px;
+              color: #aaa9a9;
+       }
+}

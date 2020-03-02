@@ -207,24 +207,16 @@ $(document).ready(function(){
 
 
 // Gestion des erreurs formulaire d'inscription
-       $('form').submit(function(e){
+       $('#formInsc').submit(function(e){
 
               var erreur;
               var mdp = $('#mdp');
               var mdp2 = $('#mdp2');
-              var commentaire = $('#commentaire');
-              var max = parseInt($('#commentaire').val(), 5);
               e.preventDefault();
 
               if(mdp2.val() != mdp.val()){
                      erreur = 'Les deux mots de passes ne correspondent pas.';
               };
-              if(!commentaire.val()){
-                     erreur = 'Veuillez saisir un commentaire';
-              } else if (commentaire.val() > max){
-                     erreur = 'Vous avez dépassé le nombre maximum de caractère';
-              };
-
               if(erreur){
                      $('#messages').show()
                      $('#message').text(erreur);
@@ -236,27 +228,41 @@ $(document).ready(function(){
                      $('#message').css('color', '#6A8B18');  
                      $('form').trigger('reset');
               };
-
-              switch (erreur){
-                     case mdp:
-                            if(mdp2.val() != mdp.val()){
-                                   erreur = 'Les deux mots de passe ne correspondent pas.';
-                            };
-                            break;
-                     case commentaire:
-                            if(!commentaire.val()){
-                                   erreur = 'Vous devez saisir un commentaire';
-                            };
-                            break;
-                     case commentaire:
-                            for (cpt = 0; cpt < 150 ; cpt++){
-                                   if(cpt > 150){
-                                          erreur = 'Votre commentaire est un peu long';
-                                   };
-                            };
-                            break;
-              };
-
        });
-       
+
+/*Gestion des erreurs formulaire d'ajout de produit*/
+
+       $('#formAjout').submit(function(e){
+              var erreur;
+              var jeu = $('#nomJeu');
+              var plateforme = $('#plateformes');
+              var prix = $('#prix');
+              var commentaire = $('#commentaire');
+              e.preventDefault();
+               
+
+              if(!jeu.val()){
+                     erreur = 'Vous devez donner le nom du jeu.';
+              };
+              if(!plateforme.val()){
+                     erreur = 'Veuillez choisir une plateforme.';
+              };
+              if(!prix.val()){
+                     erreur = 'Veuillez indiquer un prix à votre produit.';
+              };
+              if(!commentaire.val()){
+                     erreur = 'Veuillez ajouter un commentaire.';
+              };
+              if(erreur){
+                     $('#messages').show()
+                     $('#message').text(erreur);
+                     $('#message').css('color','#CD3430');
+                     return false;
+              } else {
+                     $('#messages').show();
+                     $('#message').text('Votre produit a bien été ajouté.');
+                     $('#message').css('color', '#6A8B18');  
+                     $('form').trigger('reset');
+              };   
+       });
 });

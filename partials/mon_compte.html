@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>JeuxÀVendre</title>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">       
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+       <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+       <link rel="stylesheet" href="../sass/main.css">
+</head>
+<body>
+       <header>
+              <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+					<a class="navbar-brand" href="/index.html">JeuxÀVendre</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav list-inline">
+							<li class="nav-item ">
+								<a class="nav-link" href="inscription.html">Inscription <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="connexion.html">Connexion</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="ajout.html">Ajouter un jeu</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" href="mon_compte.html">Mon compte</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Apparences
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<p id="playstation" class="dropdown-item">Thème Playstation</p>
+									<p id="xbox" class="dropdown-item">Theme Xbox</p>
+									<p id="nintendo"class="dropdown-item">Theme Nintendo</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+              </nav>
+       </header>
+       <main>
+		<div class="container-fluid">
+			<div class="row">
+				<div id="menu" class="col-sm-12 col-md-12 col-lg-3">			   
+					<div id="toggle">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<ul id="marques">
+						<li class="marque">Nintendo
+							<ul class="consoles">
+								<li class="console"><a href="nintendo64.html">Nintendo 64</a></li>
+								<li class="console"><a href="gamecube.html">GameCube</a></li>
+								<li class="console"><a href="wii.html">Wii</a></li>
+								<li class="console"><a href="wiiU.html">Wii U</a></li>
+								<li class="console"><a href="switch.html">Switch</a></li>
+							</ul>
+						</li>
+						<li class="marque">SEGA
+							<ul class="consoles">
+								<li class="console"><a href="masterSystem.html">Master System</a></li>
+								<li class="console"><a href="megadrive.html">MegaDrive</a></li>
+								<li class="console"><a href="saturn.html">Saturn</a></li>
+								<li class="console"><a href="dreamcast.html">DreamCast</a></li>
+							</ul>
+						</li>
+						<li class="marque">SONY
+							<ul class="consoles">
+								<li class="console"><a href="playstation.html">Playstation</a></li>
+								<li class="console"><a href="playstation2.html">Playstation 2</a></li>
+								<li class="console"><a href="playstation3.html">Playstation 3</a></li>
+								<li class="console"><a href="playstation4.html">Playstation 4</a></li>
+								<li class="console"><a href="psp.html">PSP</a></li>
+							</ul>
+						</li>
+						<li class="marque">Microsoft/PC
+							<ul class="consoles">
+								<li class="console"><a href="xbox.html">XBOX</a></li>
+								<li class="console"><a href="xbox360.html">XBOX 360</a></li>
+								<li class="console"><a href="xboxOne.html">XBOX One</a></li>
+								<li class="console"><a href="pc.html">PC</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-12 col-md-12 col-lg-9 form_insc">
+					<div id="toggle2">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<h2>Pseudo de la personne</h2>
+					<div class="row">
+                        <div class="col-sm-12 col-md-12  offset-lg-3 col-lg-6">
+                            <div id="resume">
+                                <h3>Vos informations</h3>
+                                <p>Nom:</p>
+                                <p>Prénom:</p>
+                                <p>Pseudo:</p>
+                                <p>adresse email:</p>
+                                <p>mot de passe:</p>
+                            </div>
+                        </div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</main>
+	   <script src="../js/main.js"></script>
+</body>
+</html>

@@ -168,6 +168,7 @@ body {
 .vitrine h2 {
   text-align: center;
   margin-top: 20px;
+  font-size: 25px;
 }
 @media screen and (min-width: 360px) and (max-width: 539px) {
   .vitrine h2 {
@@ -304,6 +305,7 @@ body {
 .form_insc h2 {
   text-align: center;
   margin-top: 20px;
+  font-size: 25px;
 }
 @media screen and (min-width: 360px) and (max-width: 539px) {
   .form_insc h2 {
@@ -502,6 +504,27 @@ body {
 
 #btnXboxA {
   display: none;
+}
+
+#resume {
+  background-color: #474747;
+  margin-top: 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+#resume h3 {
+  font-size: 1vw;
+  padding-top: 10px;
+  text-align: center;
+  color: #aaa9a9;
+}
+#resume p {
+  margin-left: 2%;
+  margin-top: 20px;
+  color: #aaa9a9;
 }
 
 /*# sourceMappingURL=main.css.map */
