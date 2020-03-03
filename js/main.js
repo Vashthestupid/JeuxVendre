@@ -4,7 +4,7 @@ $(document).ready(function(){
 
        $('.navbar-toggler').click(function(){
               $(this).toggleClass('open');
-              $('#navbarNavDropdown').slideToggle(500);
+              $('#navbarNavDropdown').slideToggle(200);
        });
       
        $('.dropdown-toggle').click(function(){
