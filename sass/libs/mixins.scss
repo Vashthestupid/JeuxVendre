@@ -94,6 +94,9 @@
                      text-align: center;
               }
        }
+       #commentaire{
+              @extend input;
+       }
        #messages{
 		display: none;
 		margin-top: 20px;

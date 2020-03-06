@@ -56,10 +56,6 @@ $(document).ready(function(){
               $('.reset').replaceWith('<input type="image" id="btnPsO" src="../images/o_play2.png">');
               $('#btnXboxA').replaceWith('<input type="image" id="btnPsX" src="../images/x_play.png">');
               $('#btnXboxB').replaceWith('<input type="image" id="btnPsO" src="../images/o_play2.png">');
-              $('#btnPsX').css('background-color', 'black');
-              $('#btnPsX').css('box-shadow','0px 9px #474747');
-              $('#btnPsO').css('background-color', 'black');
-              $('#btnPsO').css('box-shadow','0px 9px #474747');
               $('#btnPsO').click(function(){
                      $('form').trigger('reset');
               });

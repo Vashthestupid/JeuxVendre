@@ -349,25 +349,25 @@ body {
     margin-top: 50px;
   }
 }
-.formulaire input {
+.formulaire input, .formulaire #commentaire {
   color: black;
   background-color: rgba(236, 204, 104, 0.3);
   box-shadow: inset 5px 5px #8d8d8b;
 }
 @media screen and (min-width: 360px) and (max-width: 539px) {
-  .formulaire input {
+  .formulaire input, .formulaire #commentaire {
     font-size: 13px;
     text-align: center;
   }
 }
 @media screen and (width: 320px) {
-  .formulaire input {
+  .formulaire input, .formulaire #commentaire {
     font-size: 8px;
     text-align: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .formulaire input {
+  .formulaire input, .formulaire #commentaire {
     margin-top: 50px;
     text-align: center;
   }
@@ -521,12 +521,11 @@ body {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-}
-#resume h3 {
-  font-size: 1vw;
-  padding-top: 10px;
-  text-align: center;
-  color: #aaa9a9;
+  box-shadow: h3;
+  box-shadow-font-size: 1vw;
+  box-shadow-padding-top: 10px;
+  box-shadow-text-align: center;
+  box-shadow-color: #aaa9a9;
 }
 #resume p {
   margin-left: 2%;
@@ -540,6 +539,7 @@ body {
   display: block;
   font-family: "Open Sans" sans-serif;
   font-weight: 800px;
+  height: 3rem;
   letter-spacing: 0.1em;
   margin: auto;
   outline: none;
@@ -554,6 +554,7 @@ body {
 }
 #resume #modif:active {
   box-shadow: inset 1px 1px 1px #899095, 0 0 0 4px rgba(0, 0, 0, 0.2), inset -1px -1px 1px #969da3, inset 0.5rem 0.5rem 0.75rem #7d878f, inset 0.5rem 0.5rem 0.5rel #969da3;
+  border: none;
 }
 
 /*# sourceMappingURL=main.css.map */
